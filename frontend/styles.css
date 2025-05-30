@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #333;
+    background-image: linear-gradient(#333);
     margin: 0;
     padding: 20px;
     display: flex;
@@ -13,10 +13,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 250px;
     height: 100vh;
-    background-color: #007bff;
-    color: white;
+    background-image: linear-gradient(#007bff);
+    color: #000C1A;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -41,7 +41,7 @@ body {
 }
 
 #sidebar-left ul li a {
-    color: #ddd;
+    color: #000C1A;
     text-decoration: none;
     font-weight: 600;
     display: block;
@@ -62,7 +62,6 @@ body {
     overflow-y: auto;
     height: 100vh;
     box-sizing: border-box;
-    background: #333;
     border-radius: 8px;
     width: calc(100% - 520px);
 }
@@ -193,7 +192,7 @@ h1, h2 {
     right: 0;
     width: 320px;
     height: 100vh;
-    background-color: #007bff;
+    background-image: linear-gradient(#007BFF);
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
     padding: 20px 25px;
     box-sizing: border-box;
@@ -208,7 +207,7 @@ h1, h2 {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: #000C1A;
     text-align: center;
     letter-spacing: 0.02em;
 }
@@ -283,7 +282,7 @@ h1, h2 {
     margin-top: 10px;
     font-weight: 700;
     font-size: 18px;
-    color: white;
+    color: #000C1A;
     text-align: right;
     user-select: none;
 }

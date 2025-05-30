@@ -32,7 +32,7 @@ function showEventDetail(event) {
     selectedResultKey = null
     selectedOdd = 0
     eventTeamsSpan.textContent = `${event.teams[0]} x ${event.teams[1]}`
-    possibleReturnSpan.textContent = "0.00"
+    possibleReturnSpan.textContent = "R$ 0.00"
     teamAspan.textContent = `${event.teams[0]}`
     teamBspan.textContent = `${event.teams[1]}`
     addToCartBtn.disabled = true
@@ -47,7 +47,7 @@ function calculateReturn(odd) {
     const bet = parseFloat(betValueInput.value)
     
     if(isNaN(bet) || bet <= 0) {
-        possibleReturnSpan.textContent = "0.00"
+        possibleReturnSpan.textContent = "R$ 0.00"
         return
     }
     
@@ -59,7 +59,7 @@ function calculateReturn(odd) {
     }
 
     const total = bet * oddNumber
-    possibleReturnSpan.textContent = total.toFixed(2)
+    possibleReturnSpan.textContent = `R$ ${total.toFixed(2)}`
 }
 
 function addToCart(event, resultKey, betValue, odd) {
@@ -100,7 +100,7 @@ function renderCart() {
         }[item.resultKey]
 
         html += `
-        <li style="margin-bottom: 15px; padding: 10px; border-radius: 8px; background: #28a745; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <li style="margin-bottom: 15px; padding: 10px; border-radius: 8px; background: #333; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
             <div style="font-weight: 700; font-size: 16px; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white;">
                 ${item.teams[0]} x ${item.teams[1]}
             </div>
@@ -118,7 +118,7 @@ function renderCart() {
 
     html += `
     </ul>
-        <p style="margin-top: 10px; font-weight: 700; font-size: 18px; color: white; text-align: right;">
+        <p style="margin-top: 10px; font-weight: 700; font-size: 18px;color: #000C1A; text-align: right;">
             Retorno total estimado
             R$${totalReturn.toFixed(2)}
         </p>
@@ -155,7 +155,7 @@ betValueInput.addEventListener("input", () => {
         calculateReturn(selectedOdd)
         addToCartBtn.disabled = false
     } else {
-        possibleReturnSpan.textContent = "0.00"
+        possibleReturnSpan.textContent = "R$ 0.00"
         addToCartBtn.disabled = true
     }
 })
@@ -177,7 +177,7 @@ addToCartBtn.addEventListener("click", () => {
 
     selectedResultKey = null
     selectedOdd = 0
-    possibleReturnSpan.textContent = "0.00"
+    possibleReturnSpan.textContent = "R$ 0.00"
     betValueInput.value = 0
     addToCartBtn.disabled = true
 
