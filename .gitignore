@@ -1,0 +1,9 @@
+# Node modules
+backend/node_modules
+
+# Logs
+backend/logs/
+*.log
+
+# Sistema
+.DS_Store

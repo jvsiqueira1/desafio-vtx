@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Apostas - Eventos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+   <div style="overflow-y: hidden;">
+    <aside id="sidebar-left" aria-label="Menu de navegação">
+        <nav>
+          <h3>Menu (fake)</h3>
+          <ul>
+            <li><a href="#">Futebol</a></li>
+            <li><a href="#">Basquete</a></li>
+            <li><a href="#">Tênis</a></li>
+            <li><a href="#">Corrida</a></li>
+            <li><a href="#">Promoções</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    <div class="container">
+        <h1>Eventos Esportivos</h1>
+        <div id="events-list"></div>
+
+        <div id="event-detail" style="display: none;">
+            <h2>Odds para <span id="event-teams"></span></h2>
+            <label>Valor da aposta: R$<input type="number" id="bet-value" min="1" /></label>
+        <div>
+            <button data-result="winA">Vitória do <span id="teamA-span"></span></button>
+            <button data-result="winB">Vitória do <span id="teamB-span"></span></button>
+            <button data-result="draw">Empate</button>
+            <button id="add-to-cart-btn" disabled>Adicionar aposta</button>
+        </div>
+            <p>Retorno possível: R$ <span id="possible-return">0.00</span></p>
+            <button id="back-btn">Voltar</button>
+        </div>
+    </div>
+
+    <aside id="cart" aria-label="Carrinho de apostas">
+        <p>O carrinho está vazio.</p>
+    </aside>
+   </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
